@@ -1,0 +1,34 @@
+*.apk
+*.aab
+*.keystore
+
+# Built application files
+*.ap_
+*.apk
+*.aab
+
+# Files for the Android Studio IDE
+.idea/
+.gradle/
+build/
+captures/
+
+# Local configuration file (local.properties)
+local.properties
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# External native build folder
+.externalNativeBuild/
+
+# Generated files
+bin/
+gen-external-apklibs/
+
+# OS specific files
+.DS_Store
+Thumbs.db
