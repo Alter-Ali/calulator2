@@ -9,7 +9,9 @@ workflows:
         - google_play
       vars:
         JAVA_HOME: $JAVA_HOME
-      android_sdk: latest
+      android_sdk:
+        version: 33
+        build_tools: 33.0.0
 
     scripts:
       - name: Set up local properties
