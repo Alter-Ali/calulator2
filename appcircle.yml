@@ -1,0 +1,26 @@
+version: 1.0
+
+workflows:
+  android-workflow:
+    name: Android Build
+    max_build_duration: 60
+    environment:
+      java: 11
+
+    scripts:
+      - name: Set up Android SDK
+        script: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          echo "Building with Android SDK at $ANDROID_HOME"
+
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
+
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
+
+    publishing:
+      email:
+        recipients:
+          - turquoisebetsey@ptct.net  # Updated email address
